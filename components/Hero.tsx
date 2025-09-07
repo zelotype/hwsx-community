@@ -1,3 +1,10 @@
+import { Cinzel } from "next/font/google";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: '--font-cinzel',
+});
+
 export default function Hero() {
     return (
         <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -16,23 +23,22 @@ export default function Hero() {
             </div>
 
             {/* Content */}
-            <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            <div className="mx-auto max-w-2xl py-32 sm:py-32 lg:py-32">
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                     <div className="relative rounded-full px-3 py-1 text-sm text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                        Announcing our next round of funding.{" "}
-                        <a href="#" className="font-semibold text-indigo-600">
-                            <span aria-hidden="true" className="absolute inset-0" />
-                            Read more <span aria-hidden="true">&rarr;</span>
-                        </a>
+                        Your magical journey begins here — The gates of Hogwarts are open.
                     </div>
                 </div>
 
                 <div className="text-center">
-                    <h1 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-                        Hogwarts School of Witchcraft and Wizardry
+                    <h1 className={`${cinzel.className} font-medium text-6xl tracking-tight text-gray-900 sm:text-8xl`}>
+                        Hogwarts
                     </h1>
-                    <p className="mt-8 text-lg font-medium text-gray-500 sm:text-xl">
-                        School of witchcraft and wizardry
+                    <p className={`${cinzel.className} font-normal text-3xl tracking-tight text-gray-900 sm:text-4xl`}>
+                        School of Witchcraft and Wizardry
+                    </p>
+                    <p className="mt-8 text-base font-xs text-gray-500 sm:text-base">
+                        โรงเรียนเวทมนตร์ | พ่อมดแม่มด | แฟนตาซีผสานเทคโนโลยี | แบ่งบ้าน | เก็บคะแนน | ปัจจุบัน-2025
                     </p>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <a
